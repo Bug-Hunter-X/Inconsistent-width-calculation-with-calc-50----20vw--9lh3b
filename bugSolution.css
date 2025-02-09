@@ -1,0 +1,10 @@
+The solution involves using a more explicit calculation or a different approach altogether. One possible approach is to use JavaScript to calculate the width dynamically and set it using the `style` property:
+
+```javascript
+const container = document.querySelector('.container');
+const viewportWidth = window.innerWidth;
+const containerWidth = (window.innerWidth / 2) - (0.2 * viewportWidth);
+container.style.width = `${containerWidth}px`;
+```
+
+Alternatively, you could use media queries to handle different viewport sizes, providing specific width values for each breakpoint.  This is often a preferred approach for responsiveness, avoiding complex calculations in CSS itself.
