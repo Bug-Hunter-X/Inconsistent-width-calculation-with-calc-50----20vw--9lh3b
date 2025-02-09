@@ -1,0 +1,11 @@
+The following CSS code snippet demonstrates an issue where the use of `calc()` with percentages and viewport units leads to unexpected results in certain browsers or scenarios:
+
+```css
+.container {
+  width: calc(50% - 20vw);
+}
+```
+
+The `calc()` function is used to dynamically calculate the width of the `.container` element. However, the interaction between percentages (50%) and viewport units (20vw) can cause inconsistencies depending on the browser's interpretation of the calculation order and context.
+
+In some cases, the browser might calculate 20vw first, leading to incorrect width calculations.
